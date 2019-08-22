@@ -1,0 +1,22 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}
+	MyAPP | Home
+{% endblock %}
+
+{% block content %}
+	<h1>Hello World!</h1>
+	<form action="{% url 'add' %}">
+		<label for="num1">Num 1:</label>
+		<input type="text" name="num1" id="num1">
+		<br>
+		<label for="num2">Num 2:</label>
+		<input type="text" name="num2" id="num2">
+		<br><br>
+		<input type="submit" value="Submit">
+	</form>
+	<br>
+	<div>Result: <span style="color:red;">{{ res }}</span></div>
+	
+{% endblock %}
